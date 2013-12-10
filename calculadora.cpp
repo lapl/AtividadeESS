@@ -37,5 +37,6 @@ int main() {
     Calculadora c = Calculadora();
     printf("%d\n", c.exponencia(3,5));
     cout << c.add(4,5) << endl;
+    cout << c.sub(10,2) << endl;
     return 0;
 }
