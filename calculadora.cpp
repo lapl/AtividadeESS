@@ -31,6 +31,10 @@ public:
         for(int i = 0; i < b; ++i) res += a;
         return res;
     }
+	
+	int divide(int a, int b){
+	(b!=0)?(return a/b):printf("Nao pode dividir por zero");
+	}
 };
 
 int main() {
