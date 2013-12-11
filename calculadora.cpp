@@ -33,14 +33,40 @@ public:
     }
 	
 	int divide(int a, int b){
-	(b!=0)?(return a/b):printf("Nao pode dividir por zero");
+	    return a/b;
 	}
 };
 
 int main() {
     Calculadora c = Calculadora();
-    printf("%d\n", c.exponencia(3,5));
-    cout << c.add(4,5) << endl;
-    cout << c.sub(10,2) << endl;
+    while(1) {
+        cout << "add -> 0" << endl;
+        cout << "sub -> 1" << endl;
+        cout << "mult -> 2" << endl;
+        cout << "div -> 3" << endl;
+        cout << "expo -> 4" << endl;
+        cout << "Digite o comando: " << endl;
+        int command;
+        cin >> command;
+        cout << "Digite o primeiro numero" << endl;
+        int x;
+        cin >> x;
+        cout << "Digite o segundo numero" << endl;
+        int y;
+        cin >> y;
+        if(command == 0) cout << "Resultado: " << c.add(x,y);
+        else if(command == 1) cout << "Resultado: " << c.sub(x,y) << endl;
+        else if(command == 2) cout << "Resultado: " << c.mult(x,y) << endl;
+        else if(command == 3) {
+            if(y == 0) cout << "Nao pode dividir por zero" << endl;
+            else cout << "Resultado: " << c.divide(x,y) << endl;
+        } else if(command == 4){
+            cout << "Resultado: " << c.exponencia(x,y) << endl;
+        } else cout << "Nao é um comando valido" << endl;
+        cout << "Deseja continuar? (Y/N)" << endl;
+        string s;
+        cin >> s;
+        if(s == "N") break;
+    }
     return 0;
 }
